@@ -34,7 +34,13 @@ st.set_page_config(
 # ─────────────────────────────────────────────
 st.markdown("""
 <style>
-    .stApp { background-color: #0e1117; }
+    .stApp { background-color: #0e1117 !important; }
+
+    [data-testid="stSidebar"] > div:first-child {
+        background-color: #111827 !important;
+        padding: 10px;
+    }
+
     .movie-card {
         background: linear-gradient(135deg, #1a1f2e, #16213e);
         border: 1px solid #2d3561;
@@ -42,37 +48,48 @@ st.markdown("""
         padding: 16px 18px;
         margin-bottom: 12px;
     }
+
     .movie-card:hover { border-color: #e50914; }
+
     .movie-title { font-size: 17px; font-weight: 700; color: #ffffff; margin-bottom: 4px; }
     .movie-meta  { font-size: 13px; color: #a0aec0; margin-bottom: 6px; }
+
     .genre-tag {
         display: inline-block; background: #2d3561; color: #90cdf4;
         border-radius: 20px; padding: 2px 10px; font-size: 11px; margin: 2px 3px 2px 0;
     }
+
     .score-badge {
         display: inline-block; background: #e50914; color: white;
         border-radius: 8px; padding: 2px 10px;
         font-size: 12px; font-weight: 600; float: right;
     }
+
     .star-rating { color: #f6c90e; font-size: 14px; }
+
     .rank-badge {
         display: inline-flex; align-items: center; justify-content: center;
         width: 28px; height: 28px; background: #e50914; color: white;
         border-radius: 50%; font-weight: 700; font-size: 13px; margin-right: 10px;
     }
+
     .section-header {
         font-size: 22px; font-weight: 700; color: #e50914;
         margin: 10px 0 16px 0; border-left: 4px solid #e50914; padding-left: 12px;
     }
+
     .metric-card {
         background: #1a1f2e; border: 1px solid #2d3561;
         border-radius: 10px; padding: 16px; text-align: center;
     }
+
     .metric-value { font-size: 32px; font-weight: 800; color: #e50914; }
     .metric-label { font-size: 13px; color: #a0aec0; margin-top: 4px; }
-    [data-testid="stSidebar"] { background-color: #111827; }
+
     hr { border-color: #2d3561; }
-    #MainMenu, footer, header { visibility: hidden; }
+
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
