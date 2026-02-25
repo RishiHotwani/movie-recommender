@@ -5,6 +5,9 @@ import textwrap
 import warnings
 warnings.filterwarnings("ignore")
 
+st.cache_data.clear()
+st.cache_resource.clear()
+
 from movie_recommender import (
     MOVIES, RATINGS, USERS,
     ContentBasedRecommender,
