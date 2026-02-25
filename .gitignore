@@ -1,8 +1,20 @@
-venv/
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.venv/
+venv/
 env/
-.env
-.DS_Store
+
+# Streamlit cache
+.streamlit/
+
+# Poster cache
+poster_cache.json
+
+# API Keys
+*.env
+
+# VS Code
+.vscode/

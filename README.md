@@ -19,6 +19,7 @@ A complete Machine Learning project implementing **three recommendation strategi
 ```
 movie_recommender/
 ├── movie_recommender.py   # Main system (all models + demo)
+|___app.py
 ├── README.md              # This file
 └── requirements.txt       # Dependencies
 ```
@@ -103,8 +104,8 @@ Evaluated with **leave-one-out** cross-validation across all users.
 ## 📦 Dataset
 
 Built-in sample dataset with:
-- **20 classic movies** (Action, Drama, Sci-Fi, Animation, Crime…)
-- **8 users** with ratings
+- **10000 classic movies** (Action, Drama, Sci-Fi, Animation, Crime…)
+- **16 users** with ratings
 - **40 ratings** (scale 1–5)
 
 To use your own data, replace the `MOVIES` and `RATINGS` DataFrames with the required schema:
